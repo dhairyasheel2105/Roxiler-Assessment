@@ -49,9 +49,6 @@ A dynamic and user-friendly web application for visualizing transaction data, pr
 ### 🍕 Pie Chart  
 ![Pie Chart](screenshots/roxiler3.png)  
 
-### Dashboard View
-### Bar Chart
-### Pie Chart
 ## 🤝 Contributions
  Contributions are always welcome! Please follow these steps:
 1. Fork the project.
