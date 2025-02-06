@@ -1,0 +1,184 @@
+/* General Styling */
+.App {
+  font-family: 'Roboto', Arial, sans-serif;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: #00416d;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #00416d;
+  margin: 10px auto;
+  border-radius: 4px;
+}
+
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filters select,
+.filters input {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.filters input:focus,
+.filters select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: #e0f7fa;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.statistics div {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #006064;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  min-width: 600px;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #007bff;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.page-number {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.pagination button {
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bar-chart,
+.pie-chart {
+  width: 100%;
+  max-width: 500px;
+}
+
+.bar-chart h3,
+.pie-chart h3 {
+  text-align: center;
+  color: #00416d;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .filters,
+  .statistics,
+  .charts {
+    flex-direction: column;
+  }
+
+  .bar-chart,
+  .pie-chart {
+    width: 100%;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+  }
+}
